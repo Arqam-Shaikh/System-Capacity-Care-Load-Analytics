@@ -206,46 +206,51 @@ with tab4:
 
 # Footer
 st.markdown("---")
-st.markdown("""
+
+footer = """
 <div style='text-align:center; font-size:13px; color:gray; line-height:1.8;'>
 
-    <strong>🌐 System Capacity & Care Load Analytics Dashboard</strong><br>
-    <strong>Developed by Arqam Shaikh</strong><br>
-    Data Source: U.S. Department of Health & Human Services (HHS)<br><br>
+<strong>🌐 System Capacity & Care Load Analytics Dashboard</strong><br>
+<strong>Developed by Arqam Shaikh</strong><br>
+Data Source: U.S. Department of Health & Human Services (HHS)<br><br>
 
-    <a href='https://system-capacity-care-load-analytics-c6cgxbhdbv4rz6v9y9fnnm.streamlit.app/' 
-       target='_blank' 
-       style='color:#0A3D62; text-decoration:none;'>
-       <strong>🚀 Live Dashboard</strong>
-    </a>
-    &nbsp;|&nbsp;
-    <a href='https://github.com/Arqam-Shaikh/System-Capacity-Care-Load-Analytics' 
-       target='_blank' 
-       style='color:#0A3D62; text-decoration:none;'>
-       <strong>💻 GitHub Repository</strong>
-    </a>
+<a href='https://system-capacity-care-load-analytics-c6cgxbhdbv4rz6v9y9fnnm.streamlit.app/'
+target='_blank'
+style='color:#0A3D62; text-decoration:none;'>
+<strong>🚀 Live Dashboard</strong>
+</a>
 
-    <br><br>
+&nbsp; | &nbsp;
 
-    <strong>Built With</strong><br>
-    🐍 Python • 📊 Streamlit • 📈 Plotly • 🔮 Prophet • 🐼 Pandas • 🤖 Scikit-Learn
+<a href='https://github.com/Arqam-Shaikh/System-Capacity-Care-Load-Analytics'
+target='_blank'
+style='color:#0A3D62; text-decoration:none;'>
+<strong>💻 GitHub Repository</strong>
+</a>
 
-    <br><br>
+<br><br>
 
-    <strong>Internship</strong><br>
-    Unified Mentor Internship Program
+<strong>Built With</strong><br>
+Python • Streamlit • Plotly • Prophet • Pandas • Scikit-Learn
 
-    <br><br>
+<br><br>
 
-    <strong>📬 Connect with Me</strong><br>
+<strong>Internship</strong><br>
+Unified Mentor Internship Program
 
-    <a href='https://github.com/Arqam-Shaikh' target='_blank'>GitHub</a>
-    &nbsp;|&nbsp;
-    <a href='https://www.linkedin.com/in/arqam-shaikh-5196b4313/' target='_blank'>LinkedIn</a>
+<br><br>
 
-    <br><br>
+<strong>📬 Connect with Me</strong><br>
 
-    ⭐ Thank you for visiting this dashboard!
+<a href='https://github.com/Arqam-Shaikh' target='_blank'>GitHub</a>
+&nbsp; | &nbsp;
+<a href='https://www.linkedin.com/in/arqam-shaikh-5196b4313/' target='_blank'>LinkedIn</a>
+
+<br><br>
+
+⭐ Thank you for visiting this dashboard!
 
 </div>
-""", unsafe_allow_html=True)
+"""
+
+st.markdown(footer, unsafe_allow_html=True)
