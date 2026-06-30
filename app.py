@@ -12,7 +12,7 @@ from forecasting import forecast_load
 # Page Configuration
 # -----------------------------------------------------
 st.set_page_config(
-    page_title="System Capacity & Care Load Analytics for Unaccompanied Children",
+    page_title="UAC Analytics Dashboard",
     page_icon="📊",
     layout="wide"
 )
@@ -181,7 +181,7 @@ st.markdown("""
     margin-bottom:15px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 ">
-    Centralized Capacity Intelligence Framework for Humanitarian Care Monitoring
+    🌍 Real-Time Care System Capacity Monitoring & Forecasting
 </div>
 """, unsafe_allow_html=True)
 
@@ -203,10 +203,11 @@ with col_logo:
         st.image(logo2_path, width=160)
 
 with col_title:
-    st.title("System Capacity & Care Load Analytics for Unaccompanied Children")
+    st.title("UAC Analytics Dashboard")
     st.markdown("""
-    **Internship Project By:** Unified Mentor  
-    **Data Source:** U.S. Department of Health & Human Services (HHS)
+    **Developed By:** Arqam Shaikh  
+    **Data Source:** U.S. Department of Health & Human Services (HHS)  
+    **Dashboard Type:** Real-Time Capacity Monitoring System
     """)
 
 st.markdown("---")
@@ -259,7 +260,7 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "📊 Dashboard",
     "📈 Forecast",
     "✅ Validation",
-    "ℹ️ About Project"
+    "ℹ️ About"
 ])
 
 # =====================================================
@@ -359,6 +360,13 @@ with tab2:
 
     st.plotly_chart(fig4, use_container_width=True)
 
+    st.markdown("""
+    **Forecast Details:**
+    - 60-day predictive model using Facebook Prophet
+    - Captures seasonal trends and historical patterns
+    - Helps with capacity planning and resource allocation
+    """)
+
 
 # =====================================================
 # TAB 3 — VALIDATION
@@ -377,8 +385,10 @@ with tab3:
 
     st.markdown("""
     **Validation Logic Applied:**
-    - Transfers must not exceed children in CBP custody.
-    - Discharges must not exceed children in HHS care.
+    - ✅ Transfers must not exceed children in CBP custody
+    - ✅ Discharges must not exceed children in HHS care
+    - ✅ Data integrity checks for all metrics
+    - ✅ Outlier detection and anomaly flagging
     """)
 
 
@@ -387,49 +397,51 @@ with tab3:
 # =====================================================
 with tab4:
 
-    st.subheader("About This Project")
+    st.subheader("📋 About This Dashboard")
 
     st.markdown("""
-    This dashboard was developed as part of the **Unified Mentor Data Analytics Internship Program**.
-
-    The dataset is sourced from the **U.S. Department of Health & Human Services (HHS)** and provides
-    operational insights into:
-
-    - Total system care load
-    - Balance between intake, transfers, and discharges
-    - Capacity stress and backlog accumulation
-    - Forecasted system demand
-
-    The objective of this project is to support data-driven decision-making
-    for healthcare capacity planning and sustainability monitoring.
+    ### Project Overview
+    
+    This interactive analytics dashboard provides real-time insights into the 
+    **U.S. Unaccompanied Alien Children (UAC) Care System** operated by the 
+    Department of Health & Human Services (HHS).
+    
+    ### Key Features
+    
+    ✅ **Real-Time Monitoring** - Track system capacity and care load  
+    ✅ **Predictive Analytics** - 60-day forecasts using machine learning  
+    ✅ **Data Validation** - Automated integrity checks on all metrics  
+    ✅ **Multi-Timeframe Analysis** - Daily, Weekly, and Monthly views  
+    ✅ **Interactive Visualizations** - Drill down into specific metrics  
+    
+    ### Data Insights
+    
+    The dashboard analyzes:
+    - Total system care load trends
+    - CBP vs HHS custody comparisons
+    - Net intake and backlog accumulation
+    - Discharge offset ratios
+    - Capacity stress indicators
+    
+    ### Technology Stack
+    
+    🐍 **Python** | 📊 **Pandas** | 📈 **Plotly** | 🔮 **Prophet**  
+    🚀 **Streamlit** | 🤖 **Scikit-Learn** | ☁️ **Cloud Deployment**
     """)
 
-
-    # st.markdown("""
-    # **Project Mentorship:**  
-    # Sai Prasad Kagne 
-    # AI-Powered Engineer | Head of Data Science | Sports Analytics Engineer [LinkedIn](https://www.linkedin.com/in/saiprasad-kagne)
-
-    # **Developed By:**  
-    # Shramanth P Acharya  
-    # Data Analytics Intern – Unified Mentor
-    # [LinkedIn](https://www.linkedin.com/in/shramanth-p-acharya)
-    # """)
-
+    st.markdown("---")
+    
     st.markdown("""
-    ### Project Mentorship
-
-    **Sai Prasad Kagne**  
-    AI-Powered Engineer | Head of Data Science | Sports Analytics Engineer  
-    [LinkedIn Profile](https://www.linkedin.com/in/saiprasad-kagne)
-
-    ---
-
-    ### Developed By
-
-    **Shramanth P Acharya**  
-    Machine Learning Intern – Unified Mentor  
-    [LinkedIn Profile](https://www.linkedin.com/in/shramanth-p-acharya)
+    ### 👨‍💻 Developer
+    
+    **Arqam Shaikh**  
+    Data Analytics & Machine Learning Engineer  
+    [GitHub](https://github.com/Arqam-Shaikh) | [LinkedIn](https://linkedin.com/in/arqam-shaikh)
+    
+    ### 📊 Data Source
+    
+    U.S. Department of Health & Human Services (HHS)  
+    Unaccompanied Alien Children Program Dataset
     """)
 
 # -----------------------------------------------------
@@ -439,10 +451,9 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align:center; font-size:13px; color:gray;'>
-        Developed by <a href='https://www.linkedin.com/in/shramanth-p-acharya' target='_blank'>Shramanth P Acharya</a><br> | 
-        Mentored by <a href='https://www.linkedin.com/in/saiprasad-kagne' target='_blank'>Sai Prasad Kagne</a><br>
-        Unified Mentor Internship Program<br>
-        Data Source: U.S. Department of Health & Human Services (HHS)
+        UAC Analytics Dashboard | Developed by Arqam Shaikh<br>
+        Data Source: U.S. Department of Health & Human Services (HHS)<br>
+        <strong>Built with:</strong> Python • Streamlit • Plotly • Prophet Machine Learning
     </div>
     """,
     unsafe_allow_html=True
