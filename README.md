@@ -2,153 +2,140 @@
 
 ## 📌 Overview
 
-This project presents a **data-driven healthcare analytics framework** for monitoring system capacity and care load within the **Unaccompanied Alien Children (UAC) Program** administered by the U.S. Department of Health and Human Services (HHS).
+This project presents a **data-driven healthcare analytics framework** for monitoring system capacity and care load within the **Unaccompanied Alien Children (UAC) Program** administered by the **U.S. Department of Health and Human Services (HHS)**.
 
-The system analyzes daily operational data to provide insights into:
+The dashboard analyzes daily operational data to provide insights into:
 
-* Total system load
-* Inflow vs outflow balance
-* Capacity stress periods
-* Backlog accumulation
+- 📈 Total system load
+- 🔄 Inflow vs. outflow balance
+- ⚠️ Capacity stress periods
+- 📊 Backlog accumulation
+- 🔮 Future care load forecasting
 
-An interactive **Streamlit dashboard** is also developed for real-time monitoring and decision support.
-
----
-
-## 🎯 Objectives
-
-### Primary Objectives
-
-* Quantify daily and cumulative care load across CBP and HHS
-* Identify periods of system stress and relief
-* Analyze balance between intake, transfers, and discharges
-
-### Secondary Objectives
-
-* Support healthcare staffing and shelter planning
-* Improve situational awareness for policymakers
-* Enable data-driven humanitarian decision-making
+An interactive **Streamlit Dashboard** enables real-time monitoring, visualization, and decision support.
 
 ---
 
-## 📂 Dataset Description
+# 🎯 Objectives
 
-The dataset contains daily records (2023–2025) of the UAC care pipeline:
+## Primary Objectives
 
-| Column                  | Description           |
-| ----------------------- | --------------------- |
-| Date                    | Reporting date        |
-| Children apprehended    | Daily intake into CBP |
-| Children in CBP custody | Active CBP load       |
-| Children transferred    | Flow into HHS         |
-| Children in HHS care    | Active HHS load       |
-| Children discharged     | Sponsor placements    |
+- Quantify daily and cumulative care load across CBP and HHS
+- Identify periods of system stress and relief
+- Analyze intake, transfers, and discharge trends
 
----
+## Secondary Objectives
 
-## ⚙️ Methodology
-
-### 1. Data Preprocessing
-
-* Date conversion and sorting
-* Handling missing values
-* Validation of logical constraints:
-
-  * Transfers ≤ CBP custody
-  * Discharges ≤ HHS care
-
-### 2. Feature Engineering
-
-Derived key metrics:
-
-* **Total System Load** = CBP + HHS
-* **Net Daily Intake** = Transfers − Discharges
-* **Growth Rate** (day-over-day)
-* **Backlog Indicator**
-
-### 3. Trend Analysis
-
-* Daily, weekly, and monthly trends
-* Rolling averages (7-day, 14-day)
-* Seasonal pattern analysis
-
-### 4. Pressure Detection
-
-* Identification of prolonged high-load periods
-* Variability and volatility analysis
+- Support healthcare staffing and shelter planning
+- Improve operational awareness
+- Enable data-driven humanitarian decision-making
 
 ---
 
-## 📈 Key Performance Indicators (KPIs)
+# 📂 Dataset Description
 
-* **Total Children Under Care**
-* **Net Intake Pressure**
-* **Care Load Volatility Index**
-* **Backlog Accumulation Rate**
-* **Discharge Offset Ratio**
+The dataset contains daily records (2023–2025) of the UAC care pipeline.
 
----
-
-## 📊 Streamlit Dashboard
-
-### Features
-
-* System Load Overview
-* CBP vs HHS Comparison
-* Net Intake Trends
-* KPI Summary Cards
-
-### User Controls
-
-* Date range selection
-* Metric toggles
-* Time granularity filters (daily / weekly / monthly)
+| Column | Description |
+|---------|-------------|
+| Date | Reporting Date |
+| Children Apprehended | Daily intake into CBP |
+| Children in CBP Custody | Active CBP load |
+| Children Transferred | Flow into HHS |
+| Children in HHS Care | Active HHS load |
+| Children Discharged | Sponsor placements |
 
 ---
 
-## 🧠 Key Insights
+# ⚙️ Methodology
 
-* System experiences **periodic inflow spikes**
-* HHS facilities carry the majority of long-term load
-* Backlog forms when **discharges lag behind transfers**
-* Sustained positive net intake leads to **capacity stress**
+## 1️⃣ Data Preprocessing
+
+- Date conversion and sorting
+- Missing value handling
+- Logical validation
+- Data integrity checks
+
+## 2️⃣ Feature Engineering
+
+Derived metrics include:
+
+- Total System Load
+- Net Daily Intake
+- Growth Rate
+- Cumulative Backlog
+- Discharge Offset Ratio
+
+## 3️⃣ Trend Analysis
+
+- Daily trends
+- Weekly trends
+- Monthly trends
+- Rolling averages
+- Seasonal patterns
+
+## 4️⃣ Forecasting
+
+- 60-Day Forecast
+- Prophet Time-Series Model
+- Capacity Planning
 
 ---
 
-## 💡 Recommendations
+# 📈 Key Performance Indicators (KPIs)
 
-* Increase temporary capacity during surge periods
-* Improve discharge efficiency to reduce backlog
-* Use predictive analytics for proactive planning
-* Implement real-time monitoring dashboards
-
----
-
-## 🛠️ Tech Stack
-
-* Python (Pandas, NumPy)
-* Data Visualization (Matplotlib / Plotly / Seaborn)
-* Streamlit (Dashboard)
-* Time-Series Analysis
+- Total Children Under Care
+- Net Intake Pressure
+- Backlog Accumulation
+- Discharge Offset Ratio
+- System Load Trend
 
 ---
 
-## 🚀 How to Run the Project
+# 📊 Dashboard Features
 
-### 1. Clone the Repository
+✅ Real-Time Monitoring
+
+✅ Interactive Visualizations
+
+✅ Forecasting
+
+✅ KPI Cards
+
+✅ Data Validation
+
+✅ Daily / Weekly / Monthly Analysis
+
+---
+
+# 🛠 Technology Stack
+
+- Python
+- Pandas
+- NumPy
+- Plotly
+- Streamlit
+- Prophet
+- Scikit-Learn
+
+---
+
+# 🚀 Installation
+
+## Clone Repository
 
 ```bash
-git clone https://github.com/Spacharya005/System-Capacity-Care-Load-Analytics-for-Unaccompanied-Children.git
-cd System-Capacity-Care-Load-Analytics-for-Unaccompanied-Children
+git clone https://github.com/Arqam-Shaikh/System-Capacity-Care-Load-Analytics.git
+cd System-Capacity-Care-Load-Analytics
 ```
 
-### 2. Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the Streamlit App
+## Run Application
 
 ```bash
 streamlit run app.py
@@ -156,35 +143,74 @@ streamlit run app.py
 
 ---
 
-## 📁 Project Structure
+# 📁 Project Structure
 
 ```
-├── data/
+System-Capacity-Care-Load-Analytics
+│
 ├── assets/
+├── data/
 ├── app.py
 ├── forecasting.py
 ├── metrics.py
 ├── preprocessing.py
+├── requirements.txt
+└── README.md
 ```
 
+---
 
+# 🌟 Features
 
-## 🤝 Acknowledgment
-
-This project was developed as part of the **Unified Mentor Internship Program** in collaboration with healthcare analytics use cases inspired by HHS UAC operations.
+- Interactive Dashboard
+- Healthcare Capacity Analytics
+- Time-Series Forecasting
+- Data Validation
+- KPI Monitoring
+- Responsive UI
 
 ---
 
-## 🌐streamlit web application link
+# 🤝 Acknowledgement
 
-https://spacharya005appio-4bhpappgd6cy4bgvpgn36uk.streamlit.app/
+This project was developed as part of the **Unified Mentor Internship Program** using healthcare analytics use cases inspired by the **U.S. Department of Health and Human Services (HHS)**.
+
 ---
 
-## 📬 Contact
+# 🌐 Live Demo
 
-**Shramanth P. Acharya**
+### 🚀 Streamlit Application
+
+https://system-capacity-care-load-analytics-c6cgxbhdbv4rz6v9y9fnnm.streamlit.app/
+
+---
+
+# 💻 GitHub Repository
+
+https://github.com/Arqam-Shaikh/System-Capacity-Care-Load-Analytics
+
+---
+
+# 👨‍💻 Developer
+
+## Arqam Shaikh
+
+**Data Analytics | Machine Learning | Python Developer**
+
+### GitHub
+
+https://github.com/Arqam-Shaikh
+
+### LinkedIn
+
+https://www.linkedin.com/in/arqam-shaikh-5196b4313/
+
 For queries or collaboration, feel free to connect.
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Thank you for visiting this project!
