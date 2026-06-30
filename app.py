@@ -448,13 +448,23 @@ with tab4:
 # Footer
 # -----------------------------------------------------
 st.markdown("---")
-st.markdown(
-    """
-    <div style='text-align:center; font-size:13px; color:gray;'>
-        UAC Analytics Dashboard | Developed by Arqam Shaikh<br>
-        Data Source: U.S. Department of Health & Human Services (HHS)<br>
-        <strong>Built with:</strong> Python • Streamlit • Plotly • Prophet Machine Learning
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+
+st.markdown("""
+<div style='text-align:center; font-size:13px; color:gray; line-height:1.8;'>
+    <strong>🌐 UAC Analytics Dashboard</strong><br>
+    <strong>Developed by Arqam Shaikh</strong><br>
+    Data Source: U.S. Department of Health & Human Services (HHS)<br>
+    <br>
+    <a href='https://spacharya005appio-4bhpappgd6cy4bgvpgn36uk.streamlit.app/' target='_blank' style='color:#0A3D62; text-decoration:none;'><strong>🔗 Live Dashboard</strong></a> | 
+    <a href='https://github.com/Arqam-Shaikh/System-Capacity-Care-Load-Analytics' target='_blank' style='color:#0A3D62; text-decoration:none;'><strong>📊 GitHub Repository</strong></a><br>
+    <br>
+    <strong>Built with:</strong> Python • Streamlit • Plotly • Prophet ML • Pandas<br>
+    <br>
+    <em>🤝 Part of Unified Mentor Internship Program</em><br>
+    <em>⭐ If you found this useful, consider giving it a star on GitHub!</em><br>
+    <br>
+    <strong>📬 For queries or collaboration:</strong><br>
+    <a href='https://github.com/Arqam-Shaikh' target='_blank'>GitHub</a> | 
+    <a href='https://linkedin.com/in/arqam-shaikh' target='_blank'>LinkedIn</a>
+</div>
+""", unsafe_allow_html=True)
